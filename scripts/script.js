@@ -28,6 +28,21 @@ app.controller('PageController', function ($scope, $sce, $http, $rootScope, Meta
     $scope.seeAlsoLogo = true;
     $scope.showMainTweet = true;
     $scope.showLoader = false;
+    $scope.CurrantLanguage = {
+        key: "en",
+        lang: "English",
+        pinterest: "https://www.pinterest.com/elwizaracom/english",
+        reddit: "https://www.reddit.com/user/elwizaracom",
+        tumblr: "https://elwizaracom.tumblr.com"
+    }
+    $scope.LanguagesList = [];
+    for(var i in languages){
+        if(languages[i].key == lang){
+            $scope.CurrantLanguage = languages[i]; 
+        }else{
+            $scope.LanguagesList.push(languages[i]);
+        }
+    }
 
     $scope.getTweetHTML = function (UserName, Id) {
         return $sce.trustAsHtml('<blockquote class="twitter-tweet"><a href="https://twitter.com/' + UserName + '/status/' + Id + '"></a></blockquote>');
@@ -115,7 +130,7 @@ app.controller('PageController', function ($scope, $sce, $http, $rootScope, Meta
 
     $scope.tweet = {}
     if (id != null && id != "") {
-        $scope.showMainTweet = true; 
+        $scope.showMainTweet = true;
         $scope.facebookHTML = $sce.trustAsHtml('<div class="fb-comments" data-href="https://elwizara.com/?lang='+lang+'&amp;year='+year+'&amp;month='+month+'&amp;id='+id+'" data-numposts="5"></div>');
         $scope.GetMainTweet();
     } else {
@@ -123,8 +138,8 @@ app.controller('PageController', function ($scope, $sce, $http, $rootScope, Meta
         $scope.seeAlsoLogo = false;
     }
 
-    $scope.GetMoreTweets();
-    
+    $scope.GetMoreTweets();  
 
+    
 });
 

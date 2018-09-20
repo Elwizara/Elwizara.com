@@ -29,12 +29,11 @@
     <meta name="twitter:description" content="Elwizara Best Tweets">
     <meta name="twitter:image" content="https://elwizara.com/Images/logo.jpg">
 
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="Images/logo.jpg">
-    <meta property="fb:app_id" content="709093606119873" />
+    <link rel="icon" type="image/png" href="Images/htmlprofileicon.png">
+    <meta property="fb:app_id" content="342350893170808" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125476965-1"></script>
@@ -45,9 +44,8 @@
 
         gtag('config', 'UA-125476965-1');
     </script>
-
-
 </head>
+
 
 <body id="myscope" ng-controller="PageController">
     <div id="fb-root"></div>
@@ -55,15 +53,45 @@
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=709093606119873&autoLogAppEvents=1';
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1&appId=342350893170808&autoLogAppEvents=1';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="Header shadow" style="position: fixed;">
-        <h1>Elwizara.com</h1>
+        <div class="row">
+            <div class="socia-bar col-lg-4">
+
+            </div>
+            <div class="col-lg-4">
+                <img src="/Images/Header_1000_138.jpg" class="HeaderPhoto">
+            </div>
+            <div class="col-lg-4">
+                <div class="HeaderPhoto">
+                    <a href="{{CurrantLanguage.tumblr}}" class="social-icon fa fa-tumblr" target="_blank"></a>
+                    <a href="{{CurrantLanguage.pinterest}}" class="social-icon fa fa-pinterest" target="_blank"></a>
+                    <a href="{{CurrantLanguage.reddit}}" class="social-icon fa fa-reddit" target="_blank"></a>
+                    <div class="dropdown">
+                        <button class="dropbtn" ng-bind="CurrantLanguage.lang"></button>
+                        <div class="dropdown-content">
+                            <a  ng-repeat="lang in LanguagesList track by $index" href="/?lang={{lang.key}}" ng-bind="lang.lang" class="col-lg-4"></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="Header shadow">
-        <h1>Elwizara.com</h1>
+        <div class="row">
+            <div class="socia-bar col-lg-4">
+
+            </div>
+            <div class="col-lg-4">
+                <img src="/Images/Header_1000_138.jpg" class="HeaderPhoto">
+            </div>
+            <div class="col-lg-4">
+                <a href="" class="social-icon fa fa-tumblr"></a>
+            </div>
+        </div>
     </div>
 
     <div class="main-container" ng-show="showMainTweet">
@@ -103,11 +131,15 @@
 </body>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <script src="https://code.angularjs.org/1.7.3/angular.min.js"></script>
 
 
 <script src="scripts/CommenHeader.js"></script>
+<script src="scripts/language.js"></script>
 <script src="scripts/script.js"></script>
 <script src="scripts/CommenFooter.js"></script>
 
 </html>
+
+<!-- docker run --rm -p 9091:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd -->

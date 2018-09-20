@@ -17,6 +17,12 @@ h2{
     z-index: 1000;
 }
 
+.HeaderPhoto{ 
+    max-width: 100%;
+    display: table;
+    margin: 0px auto;
+}
+
 .main-container {
     max-width: 100%;
     padding: 20px 24px;
@@ -58,4 +64,95 @@ h2{
     margin-top: -(Y/2)px;
     background-color: rgba(255, 255, 255, 0.7);
     z-index:2000;
-  }
+}
+ 
+
+.social-icon { 
+    padding: 7px;
+    font-size: 20px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    margin: 15px 5px;
+    border-radius: 50%;
+    height: 35px;
+    color: #fff; 
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s; 
+}  
+  
+.fa:hover { 
+    color: #fff;
+    background-color: #1da1f2;
+    text-decoration: none;
+} 
+
+.fa-tumblr {
+    background-color: #35465c;
+} 
+ 
+.fa-pinterest {
+    background-color: #bd081c;
+}  
+.fa-reddit {
+    background-color: #ff4500;
+}   
+
+
+
+.dropbtn {
+    background-color: #fff;
+    color: #1da1f2; 
+    font-size: 16px;
+    border: none;
+    height: 50px;
+    border-radius: 10px 10px 0px 0px; 
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s; 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1da1f2;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;    
+    /* border-radius:0px 10px 10px 10px; */
+    border-radius:10px;
+
+    right: -100px;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-grid;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s; 
+
+    text-align: center;
+    
+}
+
+.dropdown-content a:hover {background-color: #35465c;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #1da1f2; color: #fff;}
