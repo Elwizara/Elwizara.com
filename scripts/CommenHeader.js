@@ -2,6 +2,7 @@
 
 
 AppBaseURL = "https://elwizara.com/";
+RequestConfig={};
 function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
