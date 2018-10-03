@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html ng-app="app"> 
+<html ng-app="app">
+
 <head>
     <meta charset="utf-8" />
     <title>Elwizara</title>
@@ -25,7 +26,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="Images/htmlprofileicon.png"> 
+    <link rel="icon" type="image/png" href="Images/htmlprofileicon.png">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125476965-1"></script>
@@ -39,40 +40,15 @@
 </head>
 
 
-<body id="myscope" ng-controller="PageController"> 
-    <div class="Header shadow" style="position: fixed;">
-        <div class="row">
-            <div class="col-lg-4">
+<body id="myscope" ng-controller="PageController">
 
-            </div>
-            <div class="col-lg-4">
-                <a href="/?lang={{CurrantLanguage.key}}"> 
-                    <img src="/Images/Header_1000_138.jpg" class="HeaderPhoto">
-                </a>
-            </div>
-            <div class="col-lg-4">
-                <div class="HeaderPhoto">
-                    <a href="{{CurrantLanguage.twitter}}" class="social-icon fa fa-twitter" target="_blank"></a>
-                    <a href="{{CurrantLanguage.tumblr}}" class="social-icon fa fa-tumblr" target="_blank"></a>
-                    <a href="{{CurrantLanguage.pinterest}}" class="social-icon fa fa-pinterest" target="_blank"></a>
-                    <a href="{{CurrantLanguage.reddit}}" class="social-icon fa fa-reddit" target="_blank"></a>
-                    <div class="dropdown">
-                        <button class="dropbtn" ng-bind="CurrantLanguage.lang"></button>
-                        <div class="dropdown-content">
-                            <a  ng-repeat="lang in LanguagesList track by $index" href="/?lang={{lang.key}}" ng-bind="lang.lang" class="col-lg-4"></a> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="Header shadow">
         <div class="row">
             <div class="col-lg-4">
 
             </div>
             <div class="col-lg-4">
-                <a href="/?lang={{CurrantLanguage.key}}"> 
+                <a href="/?lang={{CurrantLanguage.key}}">
                     <img src="/Images/Header_1000_138.jpg" class="HeaderPhoto">
                 </a>
             </div>
@@ -85,7 +61,35 @@
                     <div class="dropdown">
                         <button class="dropbtn" ng-bind="CurrantLanguage.lang"></button>
                         <div class="dropdown-content">
-                            <a  ng-repeat="lang in LanguagesList track by $index" href="/?lang={{lang.key}}" ng-bind="lang.lang" class="col-lg-4"></a> 
+                            <a ng-repeat="lang in LanguagesList track by $index" href="/?lang={{lang.key}}" ng-bind="lang.lang"
+                                class="col-lg-4"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Header shadow" style="position: fixed;top: 0px;">
+        <div class="row">
+            <div class="col-lg-4">
+
+            </div>
+            <div class="col-lg-4">
+                <a href="/?lang={{CurrantLanguage.key}}">
+                    <img src="/Images/Header_1000_138.jpg" class="HeaderPhoto">
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <div class="HeaderPhoto">
+                    <a href="{{CurrantLanguage.twitter}}" class="social-icon fa fa-twitter" target="_blank"></a>
+                    <a href="{{CurrantLanguage.tumblr}}" class="social-icon fa fa-tumblr" target="_blank"></a>
+                    <a href="{{CurrantLanguage.pinterest}}" class="social-icon fa fa-pinterest" target="_blank"></a>
+                    <a href="{{CurrantLanguage.reddit}}" class="social-icon fa fa-reddit" target="_blank"></a>
+                    <div class="dropdown">
+                        <button class="dropbtn" ng-bind="CurrantLanguage.lang"></button>
+                        <div class="dropdown-content">
+                            <a ng-repeat="lang in LanguagesList track by $index" href="/?lang={{lang.key}}" ng-bind="lang.lang"
+                                class="col-lg-4"></a>
                         </div>
                     </div>
                 </div>
@@ -93,14 +97,15 @@
         </div>
     </div>
 
-    <div class="main-container" ng-show="showMainTweet"> 
+
+    <div class="main-container" ng-show="showMainTweet">
         <div class="center-element" ng-bind-html="tweet.HTML"></div>
     </div>
 
     <div ng-show="tweet.Recommended.length > 0" class="main-container">
         <h2>Related Tweets</h2>
         <div ng-repeat="tweet in tweet.Recommended track by $index">
-            <div class="center-element" ng-bind-html="tweet"></div> 
+            <div class="center-element" ng-bind-html="tweet"></div>
         </div>
     </div>
     <div ng-show="TweetsList.length > 0" class="main-container">
@@ -117,11 +122,10 @@
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<script src="https://code.angularjs.org/1.7.3/angular.min.js"></script> 
+<script src="https://code.angularjs.org/1.7.3/angular.min.js"></script>
 
 <script src="scripts/CommenHeader.js"></script>
 <script src="scripts/language.js"></script>
-<script src="scripts/script.js"></script> 
+<script src="scripts/script.js"></script>
 
 </html>
- 
