@@ -1,6 +1,3 @@
-
-
-
 AppBaseURL = "https://elwizara.com/";
 RequestConfig={};
 function getUrlParameter(sParam) {
