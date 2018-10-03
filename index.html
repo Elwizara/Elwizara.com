@@ -42,15 +42,15 @@
 <body id="myscope" ng-controller="PageController"> 
     <div class="Header shadow" style="position: fixed;">
         <div class="row">
-            <div class="socia-bar col-lg-4">
+            <div class="col-md-4">
 
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-4">
                 <a href="/?lang={{CurrantLanguage.key}}"> 
                     <img src="/Images/Header_1000_138.jpg" class="HeaderPhoto">
                 </a>
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-4">
                 <div class="HeaderPhoto">
                     <a href="{{CurrantLanguage.twitter}}" class="social-icon fa fa-twitter" target="_blank"></a>
                     <a href="{{CurrantLanguage.tumblr}}" class="social-icon fa fa-tumblr" target="_blank"></a>
@@ -68,16 +68,27 @@
     </div>
     <div class="Header shadow">
         <div class="row">
-            <div class="socia-bar col-lg-4">
+            <div class="col-md-4">
 
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-4">
                 <a href="/?lang={{CurrantLanguage.key}}"> 
                     <img src="/Images/Header_1000_138.jpg" class="HeaderPhoto">
                 </a>
             </div>
-            <div class="col-lg-4">
-                <a href="" class="social-icon fa fa-tumblr"></a>
+            <div class="col-md-4">
+                <div class="HeaderPhoto">
+                    <a href="{{CurrantLanguage.twitter}}" class="social-icon fa fa-twitter" target="_blank"></a>
+                    <a href="{{CurrantLanguage.tumblr}}" class="social-icon fa fa-tumblr" target="_blank"></a>
+                    <a href="{{CurrantLanguage.pinterest}}" class="social-icon fa fa-pinterest" target="_blank"></a>
+                    <a href="{{CurrantLanguage.reddit}}" class="social-icon fa fa-reddit" target="_blank"></a>
+                    <div class="dropdown">
+                        <button class="dropbtn" ng-bind="CurrantLanguage.lang"></button>
+                        <div class="dropdown-content">
+                            <a  ng-repeat="lang in LanguagesList track by $index" href="/?lang={{lang.key}}" ng-bind="lang.lang" class="col-lg-4"></a> 
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -89,22 +100,14 @@
     <div ng-show="tweet.Recommended.length > 0" class="main-container">
         <h2>Related Tweets</h2>
         <div ng-repeat="tweet in tweet.Recommended track by $index">
-            <div class="center-element" ng-bind-html="tweet">
-            </div>
-            <div class="center-element">
-                <div ng-bind-html="GetNewAd($index)"></div>
-            </div>
+            <div class="center-element" ng-bind-html="tweet"></div> 
         </div>
     </div>
     <div ng-show="TweetsList.length > 0" class="main-container">
         <h2 ng-show="seeAlsoLogo">See Also</h2>
         <div class="seealso" scrolled="loadMore()" lazy-scroll-trigger="100">
             <div ng-repeat="tweet in TweetsList.slice(0,endToTweet)  track by $index">
-                <div class="center-element" ng-bind-html="tweet">
-                </div>
-                <div class="center-element">
-                    <div ng-bind-html="GetNewAd($index)"></div>
-                </div>
+                <div class="center-element" ng-bind-html="tweet"></div>
             </div>
         </div>
     </div>
