@@ -71,7 +71,7 @@ app.controller('PageController', function ($scope, $sce, $http, $rootScope, Meta
             return;
         }
         $scope.showLoader = true;
-        $http.get(AppBaseURL + $scope.Nextpageid, RequestConfig)
+        $http.get(AppBaseURL + "/" + $scope.Nextpageid, RequestConfig)
             .then(function onSuccess(response) {
                 $scope.showLoader = false;
                 res = response.data
