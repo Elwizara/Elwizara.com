@@ -20,7 +20,7 @@ function converToTweetURL(UserName, Id) {
 
 
 app.controller('PageController', function ($scope, $sce, $http, $rootScope, MetaService) {
-    $scope.Nextpageid = "Data/" + lang + "/" + "tweets.json"
+    $scope.Nextpageid = "/Data/" + lang + "/" + "tweets.json"
     $scope.TweetsList = []
     $scope.TweetsListIds = []
     $scope.endToTweet = 5;
@@ -95,13 +95,13 @@ app.controller('PageController', function ($scope, $sce, $http, $rootScope, Meta
 
     $scope.GetMainTweet = function () {
         $scope.showLoader = true;
-        $http.get(AppBaseURL + "Data/" + lang + "/" + year + "/" + month + "/" + id + ".json", RequestConfig)
+        $http.get(AppBaseURL + "/Data/" + lang + "/" + year + "/" + month + "/" + id + ".json", RequestConfig)
             .then(function onSuccess(response) {
                 $scope.showLoader = false;
                 res = response.data
                 $scope.tweet.Recommended = []
                 $scope.tweet.HTML = $scope.getTweetHTML(res.UserName, res.Id);
-                $scope.tweet.image = "Data/" + lang + "/" + year + "/" + month + "/" + id + ".png";
+                $scope.tweet.image = "/Data/" + lang + "/" + year + "/" + month + "/" + id + ".png";
                 $scope.TweetsListIds.push(res.Id);
                 for (i = 0; i < res.Recommended.length; i++) {
                     $scope.TweetsListIds.push(res.Recommended[i].Id);
