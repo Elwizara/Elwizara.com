@@ -28,6 +28,7 @@ app.controller('PageController', function ($scope, $sce, $http, $rootScope, Meta
     $scope.seeAlsoLogo = true;
     $scope.showMainTweet = true;
     $scope.showLoader = false;
+    $scope.AppBaseURL = AppBaseURL;
     $scope.CurrantLanguage = {
         key         :   "en",
         lang        :   "English",

@@ -1,4 +1,4 @@
-AppBaseURL = "https://elwizara.com/";
+AppBaseURL = "https://elwizara.github.io/elwizara.com/";
 RequestConfig={};
 function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
