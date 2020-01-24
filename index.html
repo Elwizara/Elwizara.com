@@ -48,7 +48,7 @@
 
             </div>
             <div class="col-lg-4">
-                <a href="/?lang={{CurrantLanguage.key}}">
+                <a href="{{AppBaseURL}}/?lang={{CurrantLanguage.key}}">
                     <img src="{{AppBaseURL}}/Images/Header_1000_138.jpg" class="HeaderPhoto">
                 </a>
             </div>
@@ -61,7 +61,7 @@
                     <div class="dropdown">
                         <button class="dropbtn" ng-bind="CurrantLanguage.lang"></button>
                         <div class="dropdown-content">
-                            <a ng-repeat="lang in LanguagesList track by $index" href="/?lang={{lang.key}}" ng-bind="lang.lang"
+                            <a ng-repeat="lang in LanguagesList track by $index" href="{{AppBaseURL}}/?lang={{lang.key}}" ng-bind="lang.lang"
                                 class="col-lg-4"></a>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
 
             </div>
             <div class="col-lg-4">
-                <a href="/?lang={{CurrantLanguage.key}}">
+                <a href="{{AppBaseURL}}/?lang={{CurrantLanguage.key}}">
                     <img src="{{AppBaseURL}}/Images/Header_1000_138.jpg" class="HeaderPhoto">
                 </a>
             </div>
@@ -88,7 +88,7 @@
                     <div class="dropdown">
                         <button class="dropbtn" ng-bind="CurrantLanguage.lang"></button>
                         <div class="dropdown-content">
-                            <a ng-repeat="lang in LanguagesList track by $index" href="/?lang={{lang.key}}" ng-bind="lang.lang"
+                            <a ng-repeat="lang in LanguagesList track by $index" href="{{AppBaseURL}}/?lang={{lang.key}}" ng-bind="lang.lang"
                                 class="col-lg-4"></a>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
         </div>
     </div>
 
-    <img src="/Images/loading.gif" class="Loader" ng-show="showLoader">
+    <img src="{{AppBaseURL}}/Images/loading.gif" class="Loader" ng-show="showLoader">
 </body>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
